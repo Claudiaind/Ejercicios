@@ -1,0 +1,97 @@
+Codigo 1
+
+import java.util.Scanner;
+
+public class Area {
+    public static void main(String[] args){
+        Scanner scanner = new Scanner (System.in);
+
+        System.out.print("Ingrese la base del rectangulo: ");
+        double base = scanner.nextDouble();
+
+        System.out.print("Ingrese la altura del rectangulo: ");
+        double altura = scanner.nextDouble();
+
+        double area = base * altura;
+
+        System.out.println("El area del rectangulo es: " + area);
+
+        scanner.close();
+    
+    }
+
+}
+
+
+Codigo 2 
+import java.util.Scanner;
+
+public class Promedio {
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese el primer número: ");
+        double num1 = scanner.nextDouble();
+
+        System.out.print("Ingrese el segundo número: ");
+        double num2 = scanner.nextDouble();
+
+        System.out.print("Ingrese el tercer número: ");
+        double num3 = scanner.nextDouble();
+
+        double promedio = (num1 + num2 + num3) / 3;
+
+        System.out.println("El promedio de los tres números es: " + promedio);
+
+        scanner.close();
+    }
+    
+}
+
+Codigo 3 
+import java.util.Scanner;
+public class IMC {
+    public static void main (String[] args){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese su peso en kilogramos: ");
+        double peso = scanner.nextDouble();
+
+        System.out.print("Ingrese su altura en metros: ");
+        double altura = scanner.nextDouble();
+
+        double imc = peso / (altura * altura);
+
+        System.out.println("Su Índice de Masa Corporal (IMC) es: " + imc);
+
+        scanner.close();
+
+
+    }
+    
+}
+
+Codigo 4 
+import java.util.Scanner;
+
+public class Salario {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese el salario bruto mensual: ");
+        double salarioBruto = scanner.nextDouble();
+
+        System.out.print("Ingrese el porcentaje de impuestos: ");
+        double porcentajeImpuestos = scanner.nextDouble();
+
+        System.out.print("Ingrese las deducciones adicionales: ");
+        double deduccionesAdicionales = scanner.nextDouble();
+
+        double impuesto = (salarioBruto * porcentajeImpuestos) / 100;
+        double salarioNeto = salarioBruto - impuesto - deduccionesAdicionales;
+
+        System.out.println("El salario neto es: " + salarioNeto);
+
+        scanner.close();
+    }   
+}
