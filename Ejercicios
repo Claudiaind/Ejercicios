@@ -1,0 +1,101 @@
+Contar números Pares e impares 
+import java.util.Scanner;
+
+public class Pares {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] numeros = new int[10];
+        int pares = 0;
+        int impares = 0;
+
+        System.out.println("Ingresa 10 números enteros:");
+
+        for (int i = 0; i < 10; i++) {
+            numeros[i] = sc.nextInt();
+            if (numeros[i] % 2 == 0) {
+                pares++;
+            } else {
+                impares++;
+            }
+        }
+
+        System.out.println("Números pares: " + pares);
+        System.out.println("Números impares: " + impares);
+    }
+}
+
+
+
+ 
+Suma de elementos 
+import java.util.Scanner;
+
+public class SumaE {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] numeros = new int[5];
+        int suma = 0;
+
+        System.out.println("Ingresa 5 números enteros:");
+
+        for (int i = 0; i < 5; i++) {
+            numeros[i] = sc.nextInt();
+            suma = suma + numeros[i];
+        }
+
+        System.out.println("La suma es: " + suma);
+    }
+}
+Encontrar Numero Mayor y menor 
+import java.util.Scanner;
+
+public class MayorMenor {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] numeros = new int[8];
+
+        System.out.println("Ingresa 8 números enteros:");
+
+        for (int i = 0; i < 8; i++) {
+            numeros[i] = sc.nextInt();
+        }
+
+        int mayor = numeros[0];
+        int menor = numeros[0];
+
+        for (int i = 1; i < 8; i++) {
+            if (numeros[i] > mayor) {
+                mayor = numeros[i];
+            }
+            if (numeros[i] < menor) {
+                menor = numeros[i];
+            }
+        }
+
+        System.out.println("El número mayor es: " + mayor);
+        System.out.println("El número menor es: " + menor);
+    }
+}
+ 
+ 
+Invertir Elementos
+import java.util.Scanner;
+
+public class Invertir{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] numeros = new int[6];
+
+        System.out.println("Ingresa 6 números enteros:");
+
+        for (int i = 0; i < 6; i++) {
+            numeros[i] = sc.nextInt();
+        }
+
+        System.out.println("Array invertido:");
+        for (int i = 5; i >= 0; i--) {
+            System.out.println(numeros[i]);
+        }
+    }
+}
+
