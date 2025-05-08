@@ -1,0 +1,39 @@
+Import java.util.Scanner;
+
+public class Orden {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        
+        System.out.print("¿Cuántos números deseas ingresar?: ");
+        int n = sc.nextInt();
+
+        int[] numeros = new int[n];
+
+       
+        System.out.println("Ingresa " + n + " números:");
+        for (int i = 0; i < n; i++) {
+            numeros[i] = sc.nextInt();
+        }
+
+       
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - 1 - i; j++) {
+                if (numeros[j] > numeros[j + 1]) {
+                    
+                    int temp = numeros[j];
+                    numeros[j] = numeros[j + 1];
+                    numeros[j + 1] = temp;
+                }
+            }
+        }
+
+        
+        System.out.println("Arreglo ordenado en forma ascendente:");
+        for (int i = 0; i < n; i++) {
+            System.out.print(numeros[i] + " ");
+        }
+    }
+}
+
+
