@@ -1,0 +1,93 @@
+Conversión de fechas 
+import java.time.LocalDate;
+import java.util.Scanner;
+
+public class FechaConversion {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Ingresa una fecha con el formato YYYY-MM-DD:");
+        String fechaTexto = sc.nextLine();
+
+        LocalDate fecha = LocalDate.parse(fechaTexto);
+        LocalDate unaSemanaDespues = fecha.plusWeeks(1);
+        LocalDate unMesAntes = fecha.minusMonths(1);
+
+        System.out.println("Una semana después: " + unaSemanaDespues);
+        System.out.println("Un mes antes: " + unMesAntes);
+    }
+}
+
+ 
+ 
+Comparar cadenas 
+import java.util.Scanner;
+
+public class Comparar {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Ingresa la primera cadena:");
+        String cadena1 = sc.nextLine();
+
+        System.out.println("Ingresa la segunda cadena:");
+        String cadena2 = sc.nextLine();
+
+        if (cadena1.length() == cadena2.length()) {
+            System.out.println("Las cadenas tienen la misma longitud.");
+        } else {
+            System.out.println("Las cadenas tienen diferente longitud.");
+        }
+
+        if (cadena1.equals(cadena2)) {
+            System.out.println("Las cadenas son iguales.");
+        } else {
+            System.out.println("Las cadenas son diferentes.");
+ 
+ 
+import java.util.Scanner;
+
+public class ContarPalabra {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Ingresa un texto largo:");
+        String texto = sc.nextLine().toLowerCase();
+
+        int contador = 0;
+        int posicion = texto.indexOf("ingeniería");
+
+        while (posicion != -1) {
+            contador++;
+            posicion = texto.indexOf("ingeniería", posicion + 1);
+        }
+
+        System.out.println("La palabra 'ingeniería' aparece " + contador + " veces.");
+    }
+}
+ 
+ 
+ 
+Mayusculas 
+import java.util.Scanner;
+
+public class Mayusculas {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String nombre;
+
+        while (true) {
+            System.out.println("Ingresa un nombre completo (o escribe 'salir' para terminar):");
+            nombre = sc.nextLine();
+
+            if (nombre.equalsIgnoreCase("salir")) {
+                break;
+            }
+
+            System.out.println("Nombre en mayúsculas: " + nombre.toUpperCase());
+        }
+
+        System.out.println("Programa terminado.");
+    }
+}
+ 
